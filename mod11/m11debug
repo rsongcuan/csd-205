@@ -1,0 +1,13 @@
+#Prompts the user to enter the initial investment amount and annualized interest rate
+investment_amount = str(input("Enter the initial investment: "))
+interest_rate = float(input("Enter the annualized interest rate : "))
+#Sets the balance amt equal to the intial investment 
+balance_amount = investment_amount
+#defines the year to 0 
+year = 0
+#defines the while loop condition balance_anount less than doubled investment_amount
+while balance_amount < 2 * investment_amount:
+ balance_amount = balance_amount + (balance_amount *(interest_rate/100))
+ year+=1
+#prints the years
+print('The number of years it takes an investment to double is',year)
